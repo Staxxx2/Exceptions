@@ -22,6 +22,3 @@ public class Exception2hw2 {
         System.out.println(a + b);
     }
 }
-
-
-
