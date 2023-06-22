@@ -6,7 +6,7 @@ public class Phonebook {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
-        // Запрашивать у пользователя данные
+        // Запрашиваем у пользователя данные
         System.out.print(
                 "Введите данные через пробел (фамилия, имя, отчество, дата рождения (дд.мм.гггг), номер телефона, пол(m,f)): ");
         String input = scanner.nextLine();
@@ -14,7 +14,7 @@ public class Phonebook {
         // Разделяем входные части
         String[] parts = input.split("\\s+");
 
-        // Проверка длины ввода
+        // Проверка количества введенных записей
         if (parts.length != 6) {
             System.out.println("Ошибка: Ожидается 6 записей данных, получено " + parts.length);
             return;
@@ -55,7 +55,7 @@ public class Phonebook {
             return;
         }
 
-        // Записьт в файл
+        // Запись в файл
         String fileName = lastName + ".txt";
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter;
