@@ -1,14 +1,14 @@
 import java.io.*;
 import java.util.Scanner;
 
-
 public class Phonebook {
 
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
         // Запрашивать у пользователя данные
-        System.out.print("Введите данные через пробел (фамилия, имя, отчество, дата рождения (дд.мм.гггг), номер телефона, пол(m,f)): ");
+        System.out.print(
+                "Введите данные через пробел (фамилия, имя, отчество, дата рождения (дд.мм.гггг), номер телефона, пол(m,f)): ");
         String input = scanner.nextLine();
 
         // Разделяем входные части
@@ -63,12 +63,13 @@ public class Phonebook {
             fileWriter = new FileWriter(fileName, true);
             bufferedWriter = new BufferedWriter(fileWriter);
 
-            String dataString = lastName + " " + firstName + " " + patronymic + " " + dateOfBirth.toString() + " " + phoneNumber + " " + gender.toString();
+            String dataString = lastName + " " + firstName + " " + patronymic + " " + dateOfBirth.toString() + " "
+                    + phoneNumber + " " + gender.toString();
             bufferedWriter.write(dataString);
             bufferedWriter.newLine();
 
             bufferedWriter.close();
-            fileWriter.close(); 
+            fileWriter.close();
 
             System.out.println("контакт сохраняется в файл: " + fileName);
         } catch (IOException ex) {
@@ -125,10 +126,8 @@ enum Gender {
         throw new IllegalArgumentException("Недопустимая аббревиатура пола: " + s);
     }
 
-@Override
-public String toString() {
- return abbreviation;
+    @Override
+    public String toString() {
+        return abbreviation;
+    }
 }
-}
-
-
