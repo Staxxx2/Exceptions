@@ -1,3 +1,4 @@
+package hw2;
 import java.util.Scanner;
 
 public class Exception2hw1 {

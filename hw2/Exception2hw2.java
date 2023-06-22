@@ -1,3 +1,4 @@
+package hw2;
 public class Exception2hw2 {
 
     public static void main(String[] args) {
